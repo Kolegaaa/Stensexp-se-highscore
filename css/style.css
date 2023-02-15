@@ -1,0 +1,193 @@
+body {
+  background: radial-gradient(circle at 20% 20%, #F0F8FF, #FFE4E1);
+  animation: bgmove 20s infinite linear;
+}
+
+@keyframes bgmove {
+  0% {
+    background: radial-gradient(circle at 20% 20%, #F0F8FF, #FFE4E1);
+  }
+  25% {
+    background: radial-gradient(circle at 40% 40%, #F0F8FF, #FFE4E1);
+  }
+  50% {
+    background: radial-gradient(circle at 60% 60%, #F0F8FF, #FFE4E1);
+  }
+  75% {
+    background: radial-gradient(circle at 80% 80%, #F0F8FF, #FFE4E1);
+  }
+  100% {
+    background: radial-gradient(circle at 20% 20%, #F0F8FF, #FFE4E1);
+  }
+}
+
+.containerbox {
+  perspective: 800px;
+  margin: 50px auto;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #F0F8FF;
+  animation: spin 8s linear infinite, color 6s ease-in-out infinite alternate;
+  transform-style: preserve-3d;
+}
+
+.text {
+  font-size: 24px;
+  color: #333;
+  animation: spin 8s linear infinite;
+  transform: translateZ(60px);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@keyframes color {
+  0% {
+    background-color: rgb(255, 0, 0);
+  }
+  100% {
+    background-color: rgb(0, 255, 0);
+  }
+}
+
+
+.Scoreboard{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container{
+    display: none;
+
+}
+
+#spelaOm{
+    display: none;
+    width: 100px;
+    padding: 10px 20px;
+    border: 2px solid purple;
+    border-radius: 20px;
+    background-color: transparent;
+    transition: all 0.3s;
+}
+
+#spelaOm:hover {
+  padding: 15px 25px;
+  transform: rotate(360deg);
+}
+
+
+
+.highTable {
+    margin: 20px;
+    width: 200px;
+    background-color: lightgray;
+    padding: 10px;
+    float: right;
+    
+  }
+  
+  .highScore {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 3px solid black; 
+    padding: 1px;
+  
+  }
+  
+  #high{
+    color: rebeccapurple;
+  }
+
+  .knapp1, .knapp2 ,.knapp3 {
+    border-radius: 50px;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .spelaButton spelaButton:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transform: translateX(10px);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  }
+
+  .inputText {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .inputText:hover {
+    border-color: blue;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  }
+
+ 
+  
+  .spelaButton {
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+
+  .spelaButton:hover {
+    background-color: #fff;
+  }
+  
+  .spelaButton:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+  }
+  
+  @media (min-width: 768px) {
+    .spelaButton {
+      min-width: 120px;
+      padding: 0 25px;
+    }
+  }
+
+
+  .welcome {
+    font-size: 40px;
+    font-weight: bold;
+    color: purple;
+    text-shadow: 2px 2px 2px gray;
+  }
+  
